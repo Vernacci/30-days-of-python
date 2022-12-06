@@ -20,7 +20,7 @@ for _ in range(user_input):
 
 
 budgets = []
-above_average = []
+movie_title = []
 
 for a in movies:
     budgets.append(a[1])
@@ -33,8 +33,8 @@ print("---------------------------")
 
 for b in movies:
     if b[1] > average_budget:
-        above_average.append(b[0])
+        movie_title.append(b[0])
 
-print(f"These movies went above the average budget: {', '.join(above_average)}")
+print(f"These movies went above the average budget: {', '.join(movie_title)}")
 print("------------------------")
-print(f"{len(above_average)} movies in total went above the average budget")
+print(f"{len(movie_title)} movies in total went above the average budget")
