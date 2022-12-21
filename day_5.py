@@ -33,6 +33,7 @@ numbers = [1, 2, 3, 4]
 new_numbers = numbers + [5]
 
 numbers.append(5)
+numbers.append(10)
 
 print(id(numbers))
 
