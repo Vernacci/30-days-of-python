@@ -8,7 +8,7 @@ student = {
 }
 
 # add a key
-student["hobby"] = "gaming"
+student["hobby"] = "music"
 # print(student)
 
 # modify existing values
