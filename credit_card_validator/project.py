@@ -16,7 +16,9 @@ for index, digit in enumerate(user_card_number):
     else:
         processed_digits.append(int(digit))
 
-if sum(processed_digits) % 10 == 0:
+total = int(check_digit) + sum(processed_digits)
+
+if total % 10 == 0:
     print('Valid card number!')
 else:
-    print('Invalid Card number, try again!')
+    print('Invalid card number, try again!')
