@@ -1,11 +1,42 @@
-# day 12 project
+reading_list = []
+menu_prompt = """Please enter one of the following options:
 
-reading_list = {}
+- 'a' to add a book
+- 'l' to list the books
+- 'q' to quit
 
-while True:
-    book_title_input = input('Type the book title: ')
-    book_author_input = input('Type the author of the book: ')
-    year_input = input('type the year of publication: ')
-    user_repeat = input('Do you want to add another book? (Y/n)').lower()
-    if user_repeat == 'n':
-        break
+What would you like to do? """
+
+selected_option = input(menu_prompt).strip().lower()
+
+
+def add_book():
+    title = input("Title: ").strip().title()
+    author = input("Author: ").strip().title()
+    year = input("Year of publication: ").strip()
+
+    reading_list.append({
+        "title": title,
+        "author": author,
+        "year": year
+    })
+
+
+def show_books():
+    for book in reading_list:
+        title, author, year = book.values()
+        print(f"{title}, by {author} ({year})")
+
+
+while selected_option != "q":
+    if selected_option == "a":
+        add_book()
+    elif selected_option == "l":
+        if reading_list:
+            show_books()
+        else:
+            print('Your list is empty')
+    else:
+        print(f"Sorry, '{selected_option}' isn't a valid option.")
+
+    selected_option = input(menu_prompt).strip().lower()
