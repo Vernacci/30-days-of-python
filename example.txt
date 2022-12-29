@@ -1,0 +1,6 @@
+Hello from example.txt!
+appending to the end of the file using the "a" mode
+Hello from the context manager
+Hello from the context manager
+Hello from the context manager
+Hello from the context manager
