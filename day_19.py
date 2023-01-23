@@ -12,6 +12,7 @@ import math
 def average(numbers: list) -> float:
     try:
         mean = math.fsum(numbers) / len(numbers)
+        print(numbers)
         print(mean)
     except (ZeroDivisionError, TypeError):
         print('Cannot calculate the average with the numbers you provided')
@@ -19,3 +20,10 @@ def average(numbers: list) -> float:
 
 average([10, 6.5, 8, 4])
 average(0)
+
+# exercicios
+grades = input('Enter your grades: ').split()
+try:
+    to_int = [int(grade) for grade in grades]
+except (ValueError, TypeError):
+    print('the numbers you passed are invalid')
