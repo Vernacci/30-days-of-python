@@ -27,3 +27,9 @@ try:
     to_int = [int(grade) for grade in grades]
 except (ValueError, TypeError):
     print('the numbers you passed are invalid')
+
+try:
+    with open('data.txt', 'r') as text_file:
+        print(text_file.read())
+except FileNotFoundError:
+    print('no file to read!')
